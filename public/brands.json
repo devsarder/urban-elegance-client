@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "brand": "Zara",
+    "image": "https://ibb.co/n8qy4CX"
+  },
+  {
+    "id": 2,
+    "brand": "Gucci",
+    "image": "https://ibb.co/Hn1czh0"
+  },
+  {
+    "id": 3,
+    "brand": "Mango",
+    "image": "https://ibb.co/3SnhNR2"
+  },
+  {
+    "id": 4,
+    "brand": "Alcot",
+    "image": "https://ibb.co/s2PJJnq"
+  },
+  {
+    "id": 5,
+    "brand": "loveAble",
+    "image": "https://ibb.co/7bmd6Vm"
+  },
+  {
+    "id": 6,
+    "brand": "conbipel",
+    "image": "https://ibb.co/28Xq2hj"
+  }
+]
