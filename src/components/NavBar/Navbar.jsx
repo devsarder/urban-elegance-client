@@ -1,12 +1,16 @@
 import { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
 
+import Swal from "sweetalert2";
 const Navbar = () => {
   const { users, logOut } = useContext(AuthContext);
+  const navigate = useNavigate();
   const handleLogOut = () => {
     logOut()
       .then(() => {
+        Swal.fire("logout successfully!");
+        navigate("/");
         console.log("user logged out");
       })
       .catch((err) => console.log(err));
@@ -20,7 +24,7 @@ const Navbar = () => {
         <NavLink to="/products">Add Products</NavLink>
       </li>
       <li>
-        <NavLink to="">My Cart</NavLink>
+        <NavLink to="/errorpage">My Cart</NavLink>
       </li>
     </>
   );

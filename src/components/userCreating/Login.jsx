@@ -1,10 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../NavBar/Navbar";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 
 const Login = () => {
   const { signInUser, users } = useContext(AuthContext);
+  const [showError, setShowError] = useState("");
   const navigate = useNavigate();
   // console.log(signInUser);
   const handleSignIn = (e) => {
@@ -23,6 +24,11 @@ const Login = () => {
       })
       .catch((error) => {
         const err = error.message;
+        setShowError(err);
+        alert("Please register first");
+        if (err) {
+          navigate("/register");
+        }
         const errCode = err.code;
         console.log(errCode, err);
       });
@@ -84,6 +90,7 @@ const Login = () => {
             Register
           </Link>
         </p>
+        <div>{showError && <p>{showError}</p>}</div>
       </div>
       {/* <div className="text-center  text-red-700 text-lg">
         <p className={user && "hidden "}>{validation}</p>

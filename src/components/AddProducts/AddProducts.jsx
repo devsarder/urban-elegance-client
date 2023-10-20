@@ -1,9 +1,6 @@
 const AddProducts = () => {
   return (
     <div>
-      <div className="text-center text-5xl font-semibold my-6">
-        <h2>Add Your Product</h2>
-      </div>
       <div className="hero min-h-screen ">
         <div className="hero-content flex-col ">
           <div className="text-center lg:text-left">
@@ -19,6 +16,26 @@ const AddProducts = () => {
                   type="text"
                   placeholder="Image URL"
                   name="imageURL"
+                  className="input input-bordered"
+                  required
+                />
+                <label className="label">
+                  <span className="label-text">Name</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="your name"
+                  name="name"
+                  className="input input-bordered"
+                  required
+                />
+                <label className="label">
+                  <span className="label-text">Address</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="your address"
+                  name="address"
                   className="input input-bordered"
                   required
                 />
@@ -45,13 +62,14 @@ const AddProducts = () => {
                     <option>loveable</option>
                   </select>
                   <div className="indicator">
-                   
                     <button className="btn join-item">Search</button>
                   </div>
                 </div>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary bg-amber-600 text-black">Add Product</button>
+                <button className="btn btn-primary bg-amber-600 text-black hover:text-white">
+                  Add Product
+                </button>
               </div>
             </form>
           </div>
